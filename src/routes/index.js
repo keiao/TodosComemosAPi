@@ -1,5 +1,5 @@
-import { Home } from '../pages/home.js'
-import { CreateRecipe } from '../pages/create-recipe.js'
+import { Home } from '../pages/home.js';
+import { CreateRecipe } from '../pages/create-repice.js';
 
 export const routes = {
   '/': Home,
@@ -7,7 +7,7 @@ export const routes = {
 }
 
 export const onNavigate = (pathname) => {
-  window.history.pushState=({}, pathname, window.location.origin + pathname);
+  window.history.pushState({}, pathname, window.location.origin + pathname);
   const rootElement = document.querySelector('#app');
   rootElement.innerHTML = routes[pathname].template;
 }
